@@ -27,6 +27,10 @@ public class PaymentController {
     @Resource
     private DiscoveryClient discoveryClient;
 
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin() {
+        return "hi ,i'am paymentzipkin server fall back，welcome to here, O(∩_∩)O哈哈~";
+    }
 
     @GetMapping("/payment/get/{id}")
     public CommonResult getPayment(@PathVariable("id") Long id) {
